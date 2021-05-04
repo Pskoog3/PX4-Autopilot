@@ -469,8 +469,6 @@ validate_module_configs:
 
 clean:
 	@rm -rf "$(SRC_DIR)"/build
-	@git clean -df -e ".project" -e ".cproject" -e ".idea" -e ".project" -e ".settings" -e ".vscode"
-	@git submodule foreach git clean -dfX
 
 submodulesclean:
 	@git submodule foreach --quiet --recursive git clean -ff -x -d
